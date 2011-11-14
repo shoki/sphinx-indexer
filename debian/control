@@ -1,0 +1,12 @@
+Source: sphinx-indexer
+Section: utils
+Priority: optional
+Maintainer: Andre Pascha <bender@duese.org>
+Build-Depends: debhelper (>= 5.0.0)
+Standards-Version: 3.8.0
+
+Package: sphinx-indexer
+Architecture: any
+Depends: php5-cli, php5-inotify
+Description: Sphinx Index generator and transferator
+  Tools to generate Sphinx indices and transfer them to the sphinx servers

@@ -1,0 +1,18 @@
+sphinx-indexer (1.0-3) stable; urgency=low
+
+  * fixed pid file in init script
+
+ -- Andrei Pascha <bender@duese.org>  Fri, 03 Jun 2011 11:41:17 +0200
+
+sphinx-indexer (1.0-2) stable; urgency=low
+
+  * fix library path 
+
+ -- Andrei Pascha <bender@duese.org>  Fri, 03 Jun 2011 11:34:38 +0200
+
+sphinx-indexer (1.0-1) stable; urgency=low
+
+  * new upstream release
+
+ -- root <bender@duese.org>  Wed, 22 Dec 2010 12:08:30 +0100
+

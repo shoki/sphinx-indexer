@@ -1,0 +1,31 @@
+Sphinx Index Transferator
+=========================
+
+Create Sphinx Search indices on a dedicated machine and distribute them via
+multicast FTP (UFTP).
+
+Requirments:
+============
+- PHP >5.2.6 
+- PHP inotify extension
+- Sphinx Search (http://sphinxsearch.com/)
+- UFTP (http://www.tcnj.edu/~bush/uftp.html)
+
+Installation
+=============
+On the Indexer host install the debian package and run the transferator
+daemon. Indices are created via indexer.php called eg. by cron.
+
+On the Sphinx Search Server setup a cronjob that will HUP searchd periodically
+to make it rotate the indices and start a UFTP client like this:
+
+# /usr/sbin/uftpd -L /dev/null -D /var/lib/sphinx/index -T \
+  /var/lib/sphinx/index/transfer -B 8388608 -P /var/run/sphinx/uftpd.pid
+
+Configuration
+=============
+Checkout lib/sphinxIndexer/Config.php for settings.
+
+Author
+======
+by Andre Pascha <bender@duese.org>
